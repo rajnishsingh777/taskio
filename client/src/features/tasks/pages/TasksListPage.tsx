@@ -715,8 +715,8 @@ export default function TasksListPage() {
       page,
       limit: 6,
       title: title || undefined,
-      status: status || undefined,
-      priority: priority || undefined,
+      status: (status as 'pending' | 'in-progress' | 'completed') || undefined,
+      priority: (priority as 'low' | 'medium' | 'high') || undefined,
     }),
     [page, title, status, priority]
   );

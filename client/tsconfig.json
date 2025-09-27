@@ -17,7 +17,8 @@
       "@/features/*": ["src/features/*"],
       "@/lib/*": ["src/lib/*"],
       "@/contexts/*": ["src/contexts/*"]
-    }
+    },
+    "types": ["vite/client"]
   },
   "include": ["src"]
 }

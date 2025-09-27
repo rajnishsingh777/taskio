@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useTheme } from '@/contexts/ThemeContext';
+import { useTheme } from '../contexts/ThemeContext';
 
 export default function Topbar() {
   const navigate = useNavigate();
