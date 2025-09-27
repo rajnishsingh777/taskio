@@ -13,16 +13,7 @@ const app = express();
 
 app.use(helmet());
 app.use(cors({ 
-  origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    
-    if (config.corsOrigin.includes(origin)) {
-      return callback(null, true);
-    }
-    
-    return callback(new Error('Not allowed by CORS'));
-  },
+  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
   credentials: true 
 }));
 app.use(express.json());
