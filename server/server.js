@@ -12,10 +12,10 @@ const config = loadConfig();
 const app = express();
 
 app.use(helmet());
-app.use(cors({ 
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
-  credentials: true 
-}));
+  app.use(cors({ 
+    origin: process.env.CORS_ORIGIN || 'https://taskio-1.onrender.com',
+    credentials: true 
+  }));
 app.use(express.json());
 app.use(morgan('dev'));
 
